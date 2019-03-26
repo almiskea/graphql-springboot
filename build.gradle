@@ -1,0 +1,38 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.19.RELEASE'
+	}
+}
+
+plugins {
+	id 'java'
+}
+
+apply plugin: 'org.springframework.boot'
+
+group = 'com.graphql'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'com.graphql-java:graphql-spring-boot-starter:3.6.0'
+	compile 'com.graphql-java:graphql-java-tools:3.2.0'
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	runtime 'org.hsqldb:hsqldb'
+	compileOnly 'org.projectlombok:lombok'
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
