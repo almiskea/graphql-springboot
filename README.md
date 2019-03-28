@@ -1,9 +1,9 @@
-run:-
- `docker-compose up --build`
- 
- to run the app
-
-run this query:-
+#to run the app:-
+ ```
+ docker-compose up --build
+ ```
+#to test the app:-
+run this query
 
 ```
 {
