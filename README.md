@@ -5,16 +5,16 @@ run:-
 
 run this query:-
 
-{
+`{
 	allBooks {
 		isn
 		title
 	}
-}
+}`
 
 and you should get this
 
-{
+`{
     "errors": [],
     "data": {
         "allBooks": [
@@ -33,4 +33,4 @@ and you should get this
         ]
     },
     "extensions": null
-}
+}`
